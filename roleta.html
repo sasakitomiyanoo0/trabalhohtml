@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Roleta de Aura</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:linear-gradient(120deg,#2c003e,#4b0082,#001f54);
+color:white;
+margin-top:100px;
+}
+
+#roleta{
+font-size:40px;
+margin:20px;
+transition:transform 3s;
+}
+
+button{
+padding:10px 20px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1> Roleta de Aura 67</h1>
+
+<div id="roleta">?</div>
+
+<button onclick="girar()">Girar Aura</button>
+
+<script>
+
+function girar(){
+
+const roleta=document.getElementById("roleta")
+
+let numero=Math.floor(Math.random()*101)
+
+let rotacao=Math.random()*1080
+
+roleta.style.transform="rotate("+rotacao+"deg)"
+
+setTimeout(()=>{
+
+roleta.style.transform="rotate(0deg)"
+
+if(numero>90){
+roleta.innerHTML="🔥 LENDÁRIA "+numero+"%"
+}
+else if(numero>70){
+roleta.innerHTML="✨ RARA "+numero+"%"
+}
+else if(numero>40){
+roleta.innerHTML="💠 COMUM "+numero+"%"
+}
+else{
+roleta.innerHTML="💀 FRACA "+numero+"%"
+}
+
+},3000)
+
+}
+
+</script>
+
+</body>
+</html>

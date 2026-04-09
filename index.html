@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Mundo das Auras🐡</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+text-align:center;
+color:white;
+
+background: linear-gradient(270deg,#560e31a9,#560e31a9,#560e31a9);
+background-size:800% 800%;
+animation:aura 15s ease infinite;
+}
+
+@keyframes aura{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+nav{
+background:rgba(0,0,0,0.4);
+padding:15px;
+}
+
+nav button{
+margin:5px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+font-size:16px;
+}
+
+.section{
+display:none;
+padding:40px;
+}
+
+.active{
+display:block;
+}
+
+/* CARDS AURA */
+
+.aura-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.aura-card{
+width:200px;
+padding:20px;
+border-radius:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.aura-card:hover{
+transform:scale(1.1);
+}
+
+.azul{background:#19609a;}
+.vermelha{background:#9a2624;}
+.roxa{background:#571768;}
+.verde{background:#3f8b2f;}
+.amarela{background:#fdd835;color:black}
+
+/* QUIZ */
+
+#resultado{
+margin-top:20px;
+font-size:22px;
+}
+
+/* GALERIA */
+
+.carousel{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:20px;
+scroll-behavior:smooth;
+}
+
+.carousel img{
+width:250px;
+height:150px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.carousel img:hover{
+transform:scale(1.05);
+}
+
+</style>
+
+<script>
+
+function mostrar(secao){
+document.querySelectorAll(".section").forEach(s=>{
+s.classList.remove("active")
+})
+document.getElementById(secao).classList.add("active")
+}
+
+function mostrarAura(texto){
+alert(texto)
+}
+
+function descobrirAura(){
+
+let energia=document.getElementById("energia").value
+let social=document.getElementById("social").value
+
+let resultado=""
+
+if(energia=="calma" && social=="intro"){
+resultado=" sua aura é azul🐡🐡"
+}
+else if(energia=="forte"){
+resultado=" sua aura é preta(parabens emo trevoso🖤🖤)"
+}
+else if(energia=="espiritual"){
+resultado=" sua aura é roxa🦐"
+}
+else{
+resultado=" sua aura é laranja☀️"
+}
+
+document.getElementById("resultado").innerText=resultado
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1> 💥mundo das auras💥 </h1>
+
+<nav>
+
+<button onclick="mostrar('inicio')">--Inicio🐡</button>
+<button onclick="mostrar('auras')">-Tipos de Aura🐡</button>
+<button onclick="mostrar('quiz')">-Descobrir Aura🐡</button>
+<button onclick="mostrar('galeria de aura')">-galeria de aura🐡</button>
+
+<a href="roleta.html" target="_blank">
+<button>-Roleta de Aura🐡</button>
+</a>
+
+<a href="formulario.html" target="_blank">
+<button>-Formulário🐡</button>
+</a>
+
+<a href="agradecimentos.html" target="_blank">
+<button>-Agradecimentos🐡</button>
+<p>agradecemos por usar esse site que tem muita aura</p>
+</a>
+
+</nav>
+
+<!-- INICIO -->
+
+<div id="inicio" class="section active">
+
+<h2>🐡bemmm vindo🐡</h2>
+
+<p>A aura é o campo de energia que envolve todos os seres vivos, sendo muito potente, farmar ela é igual a luta do sukuna e do gojo.</p>
+
+</div>
+
+<!-- AURAS -->
+
+<div id="auras" class="section">
+
+<h2>tipos de aura🐡</h2>
+
+<div class="aura-container">
+
+<div class="aura-card azul" onclick="mostrarAura('Aura Azul: -10000')">Aura Azul</div>
+<div class="aura-card vermelha" onclick="mostrarAura('Aura Vermelha: energia +1000')">Aura Vermelha</div>
+<div class="aura-card roxa" onclick="mostrarAura('Aura Roxa: neutra, 0')">Aura Roxa</div>
+<div class="aura-card verde" onclick="mostrarAura('Aura Verde: vegano +1000')">Aura Verde</div>
+<div class="aura-card amarela" onclick="mostrarAura('Aura Amarela: tenta -100')">Aura Amarela</div>
+
+</div>
+
+</div>
+
+<!-- QUIZ -->
+
+<div id="quiz" class="section">
+
+<h2>descubra sua Aura🐡</h2>
+
+<p>como é sua energia?</p>
+
+<select id="energia">
+<option value="calma">calma</option>
+<option value="forte">forte</option>
+<option value="espiritual">espiritual</option>
+<option value="equilibrada">equilibrada</option>
+</select>
+
+<p>você é:</p>
+
+<select id="social">
+<option value="intro">introvertido</option>
+<option value="extro">extrovertido</option>
+</select>
+
+<br><br>
+
+<button onclick="descobrirAura()">Descobrir</button>
+
+<div id="resultado"></div>
+
+</div>
+
+<!-- galeria de aura -->
+
+<div id="galeria de aura" class="section">
+
+<h2>sobre o site</h2>
+
+<p>site criado para  descobrir e espalhar A aura.</p>
+
+<h3>galeria de Aura</h3>
+
+<div class="carousel">
+
+<img src="https://preview.redd.it/i-will-make-your-avatars-aura-rules-in-comments-and-things-v0-ivxnzchvxu8e1.png?width=686&format=png&auto=webp&s=7bc67954f11c162e4ddef39fd103445ebba88251">
+<img src="https://static.significados.com.br/foto/yoga-og.jpg?class=ogImageWide">
+<img src="https://www.espiraldevida.net/wp-content/uploads/2018/01/aura-77-b.jpg">
+<img src="https://img.odcdn.com.br/wp-content/uploads/2022/12/shutterstock_1958378269.jpg">
+<img src="https://i.namu.wiki/i/nxWUHJAXa8wF2lg-xao5PwGmxdkQ3eNnVyY8JO5puyWwJb5AK_J79O-fTswzyyO_lCsS_BY6_Ti8EvotQwhnZQ.webp">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRietZGQ1py-cH8agi8Hwfs1sX-fhRBH-Um6w&s">
+<img src="https://assetsio.gnwcdn.com/click-to-aura-farm-0.webp?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp">
+<img src="https://www.pockettactics.com/wp-content/sites/pockettactics/2025/04/aura-craft-recipes.jpg">
+<img src="https://tr.rbxcdn.com/180DAY-0c8a3078eec6e7dd6960f38c923f54c7/768/432/Image/Webp/noFilter">
+<img src="https://static.wikia.nocookie.net/roblox-elemental-battlegrounds/images/9/9f/Aura-2.jpg/revision/latest/scale-to-width-down/220?cb=20190227210415">
+<img src="https://i.ytimg.com/vi/Od9epRz1QSo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBrPfNseLSVgEezRt6ClEt1ATAmMQ">
+<img src="https://tr.rbxcdn.com/180DAY-cd07a2a8fc8554f63337e8af6256603b/500/280/Image/Jpeg/noFilter">
+<img src="https://tr.rbxcdn.com/180DAY-55dc7d2f9ae681816ba8f5df03c67f78/768/432/Image/Webp/noFilter">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT43aQz66kd7sHU2ywiN-kfKXKzOy3EozRg7Q&s">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBsaQ79yL_up660WXT4yroDGMTSC5xMy1TrA&s">
+<img src="https://i.pinimg.com/736x/80/ef/bb/80efbba75914456c112a3d1740a6b796.jpg">
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>
