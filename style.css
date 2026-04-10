@@ -1,0 +1,129 @@
+body{
+    font-family:Arial;
+    margin:0;
+    text-align:center;
+    color:white;
+    
+    background-image: url(https://i.ytimg.com/vi/Whjhdq1ga5A/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5tYYFv_XoxkGvwTb9y6s2FT7tiw);
+    background-size:100% 100%;
+    background-size: cover;
+    }
+    
+    @keyframes aura{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+    }
+    
+    nav{
+    background:rgba(0,0,0,0.4);
+    padding:15px;
+    }
+    
+    nav button{
+    margin:5px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:16px;
+    }
+    
+    .section{
+    display:none;
+    padding:40px;
+    }
+    
+    .active{
+    display:block;
+    }
+
+    .aura-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    }
+    
+    .aura-card{
+    width:200px;
+    padding:20px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    }
+    
+    .aura-card:hover{
+    transform:scale(1.1);
+    }
+    
+    .azul{
+        background:#19609a;
+    }
+    .azul:hover{
+        box-shadow:0 0 20px #4fdfff;
+    }
+    .vermelha{
+        background:#9a2624;
+    }
+    .vermelha:hover{
+            box-shadow:0 0 20px #df0000;
+    }
+    .roxa{
+        background:#571768;
+    }
+    .roxa:hover{
+        box-shadow:0 0 20px #280069;
+    }
+    .verde{
+        background:#3f8b2f;
+        }
+        .verde:hover{ 
+            box-shadow:0 0 20px #0dd02a;
+
+
+        }
+    
+    .amarela{
+        background:#fdd835;color:black}
+        .amarela:hover{
+            box-shadow:0 0 20px #e6d600;
+
+            }
+    
+    #resultado{
+    margin-top:20px;
+    font-size:22px;
+    }
+    
+    .carousel{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding:20px;
+    scroll-behavior:smooth;
+    }
+    
+    .carousel img{
+    width:250px;
+    height:150px;
+    border-radius:10px;
+    transition:0.3s;
+    }
+    
+    .carousel img:hover{
+    transform:scale(1.05);
+    }
+
+    #energia{
+        width:150px;
+        padding:10px;
+        border-radius:6px;
+        border:1px solid #cfcfcf;
+    }
+    #social{
+        width:150px;
+        padding:10px;
+        border-radius:6px;
+        border:1px solid #cfcfcf;
+    }
